@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import Table from 'react-bootstrap/Table';
+import './App.css';
+import { Col, Container, Row } from 'react-bootstrap';
+import FNavbar from './assets/Components/FNavbar';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <FNavbar title="Header Bar" />
+      <Container className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+        <Row>
+          <Col>
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Column 1</th>
+                  <th>Column 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Row 1 Col 1</td>
+                  <td>Row 1 Col 2</td>
+                </tr>
+                <tr>
+                  <td>Row 2 Col 1</td>
+                  <td>Row 2 Col 2</td>
+                </tr>
+                <tr>
+                  <td>Row 3 Col 1</td>
+                  <td>Row 3 Col 2</td>
+                </tr>
+                <tr>
+                  <td>Row 4 Col 1</td>
+                  <td>Row 4 Col 2</td>
+                </tr>
+                <tr>
+                  <td>Row 5 Col 1</td>
+                  <td>Row 5 Col 2</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      </Container>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

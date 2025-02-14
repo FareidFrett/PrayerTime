@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+.bg-dark-green {
+  background-color: #006400; /* Dark green color */
+  color: white;
+}
