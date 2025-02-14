@@ -7,7 +7,7 @@ import FNavbar from './assets/Components/FNavbar';
 function App() {
   return (
     <>
-      <FNavbar title="Header Bar" />
+      <FNavbar title="Prayer Times" />
       <Container className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
         <Row>
           <Col>
